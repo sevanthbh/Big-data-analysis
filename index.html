@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Big Data Analysis</title>
+    <script>
+        function analyzeData() {
+            fetch('/analyze')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Big Data Analysis</h1>
+    <button onclick="analyzeData()">Analyze Data</button>
+    <pre id="output"></pre>
+</body>
+</html>
